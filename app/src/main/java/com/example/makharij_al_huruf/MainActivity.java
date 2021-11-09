@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     private Button Lisaveyah;
     private ImageView imageView;
     private Button Ghunna;
-    private Button quiz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,13 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(newintent);
             }
         });
-        quiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newintent= new Intent(MainActivity.this,quiz.class);
-                startActivity(newintent);
-            }
-        });
+
 
 
 
@@ -106,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
         Lisaveyah = findViewById(R.id.Lisaveyah);
         Ghunna = findViewById(R.id.Ghunna);
         imageView = findViewById(R.id.imageView);
-        quiz=findViewById(R.id.quiz);
 
     }
 }

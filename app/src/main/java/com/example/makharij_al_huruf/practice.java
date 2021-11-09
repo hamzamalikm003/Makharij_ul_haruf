@@ -9,38 +9,6 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-class Subpoints{
-    public String sno;
-    public String letters;
-    public String soundProduced;
-    Subpoints ()
-    {
-
-    }
-
-    Subpoints(String num1,String let,String sound)
-    {
-        this.sno=num1;
-        this.letters=let;
-        this.soundProduced=sound;
-    }
-
-
-}
-class Emissionpoints {
-    String name;
-    Subpoints [] information;
-    int  path;
-    Emissionpoints(String nm,Subpoints [] info,int pth)
-    {
-        this.name=nm;
-        this.information=info;
-        this.path=pth;
-
-    }
-
-}
-
 public class practice extends AppCompatActivity {
     private TableLayout tbLayout;
     private TextView textView ;
@@ -53,7 +21,7 @@ public class practice extends AppCompatActivity {
         setContentView(R.layout.activity_practice);
         initialize();
 
-       String BtnName = getIntent().getStringExtra("button");
+        String BtnName = getIntent().getStringExtra("button");
         if (BtnName.equals("Halqiyah")) {
 
             imgView.setBackgroundResource(emissionpoints[0].path);
@@ -98,11 +66,11 @@ public class practice extends AppCompatActivity {
             createTabale(emissionpoints[6]);
 
         }
-   }
+    }
     private void initialize(){
-    tbLayout=findViewById(R.id.TableLayout);
-    textView=findViewById(R.id.MainHeading);
-    imgView=findViewById(R.id.imageView3);
+        tbLayout=findViewById(R.id.TableLayout);
+        textView=findViewById(R.id.MainHeading);
+        imgView=findViewById(R.id.imageView3);
 
 
         Subpoints a1 = new Subpoints("1", "          ه أ", "End of Throat");
@@ -243,6 +211,39 @@ public class practice extends AppCompatActivity {
         tbRow.addView(tv3);
 
         tbLayout.addView(tbRow);
+    }
+
+}
+
+
+class Subpoints{
+    public String sno;
+    public String letters;
+    public String soundProduced;
+    Subpoints ()
+    {
+
+    }
+
+    Subpoints(String num1,String let,String sound)
+    {
+        this.sno=num1;
+        this.letters=let;
+        this.soundProduced=sound;
+    }
+
+
+}
+class Emissionpoints {
+    String name;
+    Subpoints [] information;
+    int  path;
+    Emissionpoints(String nm,Subpoints [] info,int pth)
+    {
+        this.name=nm;
+        this.information=info;
+        this.path=pth;
+
     }
 
 }
