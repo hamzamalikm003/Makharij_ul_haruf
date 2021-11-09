@@ -91,7 +91,7 @@
         app:layout_constraintVertical_bias="0.96" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView"
         android:layout_width="403dp"
         android:layout_height="639dp"
         android:layout_marginStart="4dp"
@@ -102,5 +102,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/main_img" />
+
+    <Button
+        android:id="@+id/quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz"
+        tools:layout_editor_absoluteX="292dp"
+        tools:layout_editor_absoluteY="650dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
