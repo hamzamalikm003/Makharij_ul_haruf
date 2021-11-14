@@ -3,6 +3,7 @@ package com.example.makharij_al_huruf;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,8 @@ import android.widget.ImageView;
 
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements
+        View.OnClickListener {
     private Button Halqiyah;
     private Button Lahatiyah;
     private Button Shajariyah;
@@ -26,68 +28,138 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialize();
-        Halqiyah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        Halqiyah.setOnClickListener(this);
+//        Halqiyah.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent newintent= new Intent(MainActivity.this,practice.class);
+//                newintent.putExtra("button", "Halqiyah");
+//                startActivity(newintent);
+//            }
+//        });
+        Lahatiyah.setOnClickListener(this);
+//        Lahatiyah.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent newintent= new Intent(MainActivity.this,practice.class);
+//                newintent.putExtra("button", "Lahatiyah");
+//                startActivity(newintent);
+//            }
+//        });
+        Shajariyah.setOnClickListener(this);
+//        Shajariyah.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent newintent= new Intent(MainActivity.this,practice.class);
+//                newintent.putExtra("button", "Shajariyah");
+//                startActivity(newintent);
+//            }
+//        });
+        Tarfiyah.setOnClickListener(this);
+//        Tarfiyah.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent newintent= new Intent(MainActivity.this,practice.class);
+//                newintent.putExtra("button", "Tarfiyah");
+//                startActivity(newintent);
+//            }
+//        });
+        Niteeyah.setOnClickListener(this);
+//        Niteeyah.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent newintent= new Intent(MainActivity.this,practice.class);
+//                newintent.putExtra("button", "Niteeyah");
+//                startActivity(newintent);
+//            }
+//        });
+        Lisaveyah.setOnClickListener(this);
+//        Lisaveyah.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent newintent= new Intent(MainActivity.this,practice.class);
+//                newintent.putExtra("button", "Lisaveyah");
+//                startActivity(newintent);
+//            }
+//        });
+        Ghunna.setOnClickListener(this);
+//        Ghunna.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent newintent= new Intent(MainActivity.this,practice.class);
+//                newintent.putExtra("button", "Ghunna");
+//                startActivity(newintent);
+//            }
+//        });
+
+    }
+    @Override
+
+    public void onClick(View v) {
+
+        switch (v.getId( )) {
+
+            case R.id.Halqiyah:
+
                 Intent newintent= new Intent(MainActivity.this,practice.class);
                 newintent.putExtra("button", "Halqiyah");
                 startActivity(newintent);
-            }
-        });
-        Lahatiyah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newintent= new Intent(MainActivity.this,practice.class);
-                newintent.putExtra("button", "Lahatiyah");
-                startActivity(newintent);
-            }
-        });
-        Shajariyah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newintent= new Intent(MainActivity.this,practice.class);
-                newintent.putExtra("button", "Shajariyah");
-                startActivity(newintent);
-            }
-        });
 
-        Tarfiyah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newintent= new Intent(MainActivity.this,practice.class);
-                newintent.putExtra("button", "Tarfiyah");
-                startActivity(newintent);
-            }
-        });
-        Niteeyah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newintent= new Intent(MainActivity.this,practice.class);
-                newintent.putExtra("button", "Niteeyah");
-                startActivity(newintent);
-            }
-        });
-        Lisaveyah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newintent= new Intent(MainActivity.this,practice.class);
-                newintent.putExtra("button", "Lisaveyah");
-                startActivity(newintent);
-            }
-        });
-        Ghunna.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newintent= new Intent(MainActivity.this,practice.class);
-                newintent.putExtra("button", "Ghunna");
-                startActivity(newintent);
-            }
-        });
+                break;
+
+            case R.id.Lahatiyah:
+
+                Intent newintent1= new Intent(MainActivity.this,practice.class);
+                newintent1.putExtra("button", "Lahatiyah");
+                startActivity(newintent1);
 
 
+                break;
+
+            case R.id.Shajariyah:
+
+                Intent newintent2= new Intent(MainActivity.this,practice.class);
+                newintent2.putExtra("button", "Shajariyah");
+                startActivity(newintent2);
+
+
+                break;
+            case R.id.Tarfiyah:
+
+                Intent newintent3= new Intent(MainActivity.this,practice.class);
+                newintent3.putExtra("button", "Tarfiyah");
+                startActivity(newintent3);
+
+
+                break;
+            case R.id.Niteeyah:
+
+                Intent newintent4= new Intent(MainActivity.this,practice.class);
+                newintent4.putExtra("button", "Niteeyah");
+                startActivity(newintent4);
+
+
+                break;
+            case R.id.Lisaveyah:
+
+                Intent newintent5= new Intent(MainActivity.this,practice.class);
+                newintent5.putExtra("button", "Lisaveyah");
+                startActivity(newintent5);
+
+
+                break;
+            case R.id.Ghunna:
+
+                Intent newintent6= new Intent(MainActivity.this,practice.class);
+                newintent6.putExtra("button", "Ghunna");
+                startActivity(newintent6);
+
+
+                break;
 
 
 
+        }
 
     }
     private void initialize(){
