@@ -13,10 +13,10 @@
         android:text="Halqiyah"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.498" />
 
     <Button
         android:id="@+id/Lahatiyah"
@@ -102,5 +102,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/main_img" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
